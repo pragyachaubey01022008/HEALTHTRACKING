@@ -1,0 +1,7 @@
+{
+  "name": "VitalityTrack Vr4",
+  "description": "AI-powered health and nutrition tracker for users and coaches. Optimized for deployment on Vercel and GitHub.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

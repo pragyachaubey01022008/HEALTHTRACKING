@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #006d35;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #38a55e;
+  --color-on-primary-container: #00210b;
+  
+  --color-secondary: #006096;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d1e4ff;
+  --color-on-secondary-container: #001d35;
+  
+  --color-tertiary: #755700;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #ffe08d;
+  --color-on-tertiary-container: #241a00;
+  
+  --color-background: #f4fbf5;
+  --color-on-background: #171d19;
+  
+  --color-surface: #f4fbf5;
+  --color-on-surface: #171d19;
+  --color-surface-container: #e9f0e9;
+  --color-surface-container-low: #f0f5f0;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-variant: rgba(23, 29, 25, 0.06);
+  --color-on-surface-variant: #414941;
+  
+  --color-outline: #717971;
+  --color-outline-variant: rgba(113, 121, 113, 0.15);
+  
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  
+  --shadow-ambient: 0 12px 40px rgba(23, 29, 25, 0.06);
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-background text-on-background antialiased transition-colors duration-500;
+  }
+
+  .dark {
+    --color-background: #0d120e;
+    --color-on-background: #e1e3df;
+    --color-surface: #0d120e;
+    --color-on-surface: #e1e3df;
+    --color-surface-container: #1b211c;
+    --color-surface-container-low: #171d19;
+    --color-surface-container-lowest: #000000;
+    --color-surface-variant: rgba(225, 227, 223, 0.1);
+    --color-on-surface-variant: #c1c9c0;
+    --color-outline: #8b938b;
+    --color-outline-variant: rgba(139, 147, 139, 0.2);
+    --shadow-ambient: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/40;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
